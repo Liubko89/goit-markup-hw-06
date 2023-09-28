@@ -194,25 +194,25 @@ input {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/PeopleOffice.jpg);
+    url(../images/PeopleOfficeMobile.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  max-width: 1440px;
-  padding: 188px 0;
+  padding: 72px 0;
   text-align: center;
   margin: 0 auto;
 }
 
 .hero-heading {
-  color: #fff;
-  text-align: center;
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 0 40px;
+  font-weight: 700;
   max-width: 496px;
-  margin: 0 auto 48px;
+  margin: 0 auto 72px;
 }
 
 .hero-button {
@@ -307,6 +307,7 @@ input {
   display: flex;
   flex-direction: column;
   gap: 72px 24px;
+  justify-content: center;
 }
 
 .our-team-item {
@@ -315,6 +316,7 @@ input {
   flex-direction: column;
   align-items: center;
   flex-basis: 100%;
+  max-width: 264px;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -559,14 +561,6 @@ input {
   margin-bottom: 16px;
   text-align: center;
 }
-
-/* .footer-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-} */
 
 .footer-input {
   display: block;
