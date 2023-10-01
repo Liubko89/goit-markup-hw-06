@@ -12,6 +12,7 @@
   --white-background: #fff;
   --modal-background: #fcfcfc;
   --modal-button-border: #0000001a;
+  --common-black: #2f2f37;
 }
 
 body {
@@ -116,7 +117,21 @@ input {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-right: 76px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.mob-menu-btn {
+  background-color: transparent;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.mob-menu-btn-icon {
+  fill: var(--common-black);
 }
 
 .logo-header-studio {
@@ -124,10 +139,10 @@ input {
 }
 
 .header-nav-menu {
-  display: flex;
-  gap: 40px;
+  display: none;
 }
 
+.mob-nav-menu-link,
 .link-navigation {
   display: inline-block;
   color: var(--dark);
@@ -139,11 +154,14 @@ input {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.mob-nav-menu-link:hover,
+.mob-nav-menu-link:focus,
 .link-navigation:hover,
 .link-navigation:focus {
   color: var(--pressed-state);
 }
 
+.mob-current,
 .current {
   position: relative;
   color: var(--pressed-state);
@@ -162,25 +180,31 @@ input {
 }
 
 .address {
+  display: none;
   font-style: normal;
   margin-left: auto;
 }
 
 .address-menu {
   display: flex;
-  gap: 40px;
+  flex-wrap: wrap;
+  column-gap: 40px;
   align-items: center;
+  justify-content: flex-end;
 }
 
+.mob-address-link,
 .address-link {
   color: currentColor;
-  font-size: 16px;
   font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.mob-address-link:hover,
+.mob-address-link:focus,
 .address-link:hover,
 .address-link:focus {
   color: var(--pressed-state);
@@ -194,7 +218,7 @@ input {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/PeopleOfficeMobile.jpg);
+    url(../images/hero-bg/Dark-bg-mob.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -562,12 +586,15 @@ input {
   text-align: center;
 }
 
+.footer-label {
+  margin: 0 auto 16px;
+}
+
 .footer-input {
   display: block;
   max-width: 288px;
   height: 40px;
   padding: 8px 16px;
-  margin: 0 auto 16px;
   color: var(--white-background);
   font-size: 12px;
   line-height: 1.5;
@@ -603,7 +630,6 @@ input {
 /* Modal */
 
 .backdrop {
-  position: relative;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -614,24 +640,18 @@ input {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
 .modal {
   background-color: var(--modal-background);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 408px;
-  min-height: 584px;
+  width: 100%;
+  max-width: 288px;
   overflow-y: auto;
   flex-shrink: 0;
   border-radius: 4px;
-  padding: 72px 24px 24px;
+  padding: 72px 16px 24px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -806,4 +826,80 @@ input {
   display: block;
   padding: 16px 32px;
   margin: 0 auto;
+}
+
+/* Mobile-Backdrop */
+
+.mob-backdrop {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  width: 100%;
+  background-color: var(--white-background);
+  position: fixed;
+  inset: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-modal {
+  height: 100%;
+  background-color: inherit;
+  padding-top: 72px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.mob-close-btn {
+  background-color: transparent;
+  top: 24px;
+  right: 24px;
+}
+
+.mob-nav {
+  margin-bottom: auto;
+}
+
+.mob-nav-menu-link {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  padding: 0;
+}
+
+.mob-nav-menu-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mob-address {
+  margin-bottom: 48px;
+}
+
+.mob-address-menu-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.mob-address-link {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.mob-socials-menu {
+  justify-content: space-between;
+  padding-right: 8px;
+}
+
+.mob-socials-menu .team-icon-item {
+  flex-shrink: 0;
+}
+
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
