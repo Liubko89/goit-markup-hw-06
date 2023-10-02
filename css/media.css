@@ -71,14 +71,10 @@
 
   /* Our team section */
 
-  .our-team-section {
-    padding-left: 92px;
-    padding-right: 92px;
-  }
-
   .our-team-menu {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     row-gap: 64px;
   }
 
@@ -174,6 +170,7 @@
   /* Hero-section */
 
   .hero-section {
+    max-width: 1440px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -210,10 +207,6 @@
   }
 
   /* Our team section */
-
-  .our-team-menu {
-    justify-content: center;
-  }
 
   .our-team-item {
     flex-basis: calc((100% - 3 * 24px) / 4);

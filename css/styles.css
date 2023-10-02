@@ -117,8 +117,6 @@ input {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  padding-top: 16px;
-  padding-bottom: 16px;
 }
 
 .mob-menu-btn {
@@ -312,8 +310,6 @@ input {
 
 .our-team-section {
   background-color: var(--light);
-  padding-left: 12px;
-  padding-right: 12px;
 }
 
 .our-team-heading {
@@ -331,7 +327,7 @@ input {
   display: flex;
   flex-direction: column;
   gap: 72px 24px;
-  justify-content: center;
+  align-items: center;
 }
 
 .our-team-item {
@@ -884,6 +880,7 @@ input {
 
 .mob-address-link {
   font-size: 20px;
+  font-style: normal;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
